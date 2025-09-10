@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Car Insurance — Quote & Buy</title>
+  <link rel="stylesheet" href="Carinsurance.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">InsuraCar</h1>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Policies</a>
+        <a href="#">Claims</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h2>Get a car insurance quote in minutes</h2>
+          <p>Choose cover levels, add-ons and enter vehicle details to view available plans.</p>
+          <a class="btn primary" href="#quote">Get Quote</a>
+        </div>
+        <div class="hero-right">
+          <div class="summary-card">
+            <h3>Quick Info</h3>
+            <ul>
+              <li>24/7 Roadside Assistance</li>
+              <li>Flexible premium payments</li>
+              <li>Instant digital policy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote" class="container quote-section">
+      <div class="form-card">
+        <h3>Vehicle & Owner Details</h3>
+        <form id="insuranceForm" class="quote-form" autocomplete="off">
+          <div class="row">
+            <div class="col">
+              <label for="ownerName">Owner Name</label>
+              <input id="ownerName" name="ownerName" type="text" placeholder="Full name" required />
+            </div>
+            <div class="col">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" />
+            </div>
+            <div class="col">
+              <label for="regNo">Registration No.</label>
+              <input id="regNo" name="regNo" type="text" placeholder="KA01AB1234" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="make">Make</label>
+              <input id="make" name="make" type="text" placeholder="Hyundai / Maruti / Toyota" />
+            </div>
+            <div class="col">
+              <label for="model">Model & Year</label>
+              <input id="model" name="model" type="text" placeholder="i20 / 2018" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-full">
+              <label for="usage">Usage</label>
+              <select id="usage" name="usage">
+                <option>Personal</option>
+                <option>Commercial</option>
+                <option>Ride-hailing</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-full">
+              <label>Driving History</label>
+              <div class="inline-inputs">
+                <label><input type="radio" name="history" value="No Claims" checked /> No Claims</label>
+                <label><input type="radio" name="history" value="1-2 Claims" /> 1-2 Claims</label>
+                <label><input type="radio" name="history" value="3+ Claims" /> 3+ Claims</label>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- Plans + Addons -->
+      <aside class="plans-column">
+        <h3>Choose a Plan</h3>
+        <div class="plans-grid">
+          <article class="plan-card">
+            <div class="plan-header">
+              <h4>Basic</h4>
+              <p class="price">₹3,500/yr</p>
+            </div>
+            <ul>
+              <li>Third-party liability</li>
+              <li>Limited accidental cover</li>
+              <li>No roadside assistance</li>
+            </ul>
+            <label class="select-btn">
+              <input type="radio" name="plan" value="Basic" /> Select Basic
+            </label>
+          </article>
+
+          <article class="plan-card featured">
+            <div class="plan-header">
+              <h4>Standard</h4>
+              <p class="price">₹6,200/yr</p>
+            </div>
+            <ul>
+              <li>Comprehensive cover</li>
+              <li>Roadside assistance</li>
+              <li>Owner personal accident</li>
+            </ul>
+            <label class="select-btn">
+              <input type="radio" name="plan" value="Standard" checked /> Select Standard
+            </label>
+          </article>
+
+          <article class="plan-card">
+            <div class="plan-header">
+              <h4>Premium</h4>
+              <p class="price">₹9,800/yr</p>
+            </div>
+            <ul>
+              <li>Zero depreciation</li>
+              <li>Engine protection & accessories</li>
+              <li>Accel claims support</li>
+            </ul>
+            <label class="select-btn">
+              <input type="radio" name="plan" value="Premium" /> Select Premium
+            </label>
+          </article>
+        </div>
+
+        <div class="addons">
+          <h4>Add-ons</h4>
+          <label class="addon"><input type="checkbox" name="roadside" value="true" /> Roadside Assistance (+₹800)</label>
+          <label class="addon"><input type="checkbox" name="zero_dep" value="true" /> Zero Depreciation (+₹1200)</label>
+          <label class="addon"><input type="checkbox" name="return_to_invoice" value="true" /> Return to Invoice (+₹1500)</label>
+        </div>
+
+        <!-- Live total premium -->
+        <div class="total-box">
+          <p><strong>Total Premium: </strong><span id="totalPremium">₹6,200</span></p>
+        </div>
+
+        <div class="cta-area">
+          <button type="reset" class="btn secondary">Clear</button>
+          <button type="submit" class="btn primary">Proceed to Buy</button>
+        </div>
+      </aside>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq container">
+      <h3>Frequently asked</h3>
+      <details>
+        <summary>What documents do I need?</summary>
+        <p>Vehicle RC, Owner ID, Address proof, and past policy (if any).</p>
+      </details>
+      <details>
+        <summary>How are premiums calculated?</summary>
+        <p>Premium depends on car model, age, NCB, add-ons and driving history.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> InsuraCar — Secure your ride.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // base plan costs
+    const plans = { Basic: 3500, Standard: 6200, Premium: 9800 };
+    const planRadios = document.querySelectorAll("input[name='plan']");
+    const addonChecks = document.querySelectorAll(".addons input[type='checkbox']");
+    const totalPremiumEl = document.getElementById("totalPremium");
+
+    function calculatePremium() {
+      let total = 0;
+      planRadios.forEach(radio => {
+        if (radio.checked) total += plans[radio.value];
+      });
+      addonChecks.forEach(check => {
+        if (check.checked) {
+          if (check.name === "roadside") total += 800;
+          if (check.name === "zero_dep") total += 1200;
+          if (check.name === "return_to_invoice") total += 1500;
+        }
+      });
+      totalPremiumEl.textContent = "₹" + total.toLocaleString("en-IN");
+    }
+
+    planRadios.forEach(radio => radio.addEventListener("change", calculatePremium));
+    addonChecks.forEach(check => check.addEventListener("change", calculatePremium));
+    calculatePremium();
+
+    // form submission → Spring Boot
+    const form = document.getElementById("insuranceForm");
+    form.addEventListener("submit", async (e) => {
+    	  e.preventDefault();
+
+    	  const data = {
+    	    ownerName: form.ownerName.value,
+    	    email: form.email.value,
+    	    phone: form.phone.value,
+    	    regNo: form.regNo.value,
+    	    make: form.make.value,
+    	    model: form.model.value,
+    	    usage: form.usage.value,
+    	    history: form.history.value,
+    	    plan: form.plan.value,
+    	    roadside: form.roadside.checked,
+    	    zero_dep: form.zero_dep.checked,
+    	    return_to_invoice: form.return_to_invoice.checked,
+    	    totalPremium: totalPremiumEl.textContent
+    	  };
+
+    	  try {
+    	    const res = await fetch("http://localhost:8080/api/car-insurance", {
+    	      method: "POST",
+    	      headers: { "Content-Type": "application/json" },
+    	      body: JSON.stringify(data)
+    	    });
+
+    	    if(res.ok) {
+    	    	  const savedPolicy = await res.json(); // get policy from backend
+    	    	  window.location.href = "/payment/" + savedPolicy.id; // redirect to payment page
+    	    	} else {
+    	    	  const err = await res.json();
+    	    	  alert("Error: " + err.message);
+    	    	}
+    	  } catch (err) {
+    	    alert("Failed: " + err.message);
+    	  }
+    	});
+
+
+    doument.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
