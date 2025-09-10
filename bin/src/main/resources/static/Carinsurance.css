@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0f6fba;
+  --primary-light: #eaf4fc;
+  --secondary: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --radius: 14px;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: var(--secondary);
+  box-shadow: var(--shadow);
+  padding: 14px 0;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 60px 20px;
+  background: linear-gradient(120deg, #f0f8ff, #ffffff);
+}
+
+.hero-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+  align-items: center;
+}
+
+.hero-left h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.hero-left p {
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+}
+
+.btn.secondary {
+  background: var(--secondary);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* ===== Summary Card / Quick Info ===== */
+.summary-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.summary-card h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.summary-card ul {
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Special Quick Info adjustments */
+.quick-info {
+  width: 100%;
+  max-width: 340px;
+  margin-left: 20;
+}
+
+/* ===== Quote Section ===== */
+.quote-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: flex;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.form-card {
+  flex: 1;
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.quote-form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--muted);
+}
+
+.quote-form input,
+.quote-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.quote-form input:focus,
+.quote-form select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+/* Grid inside form */
+.row {
+  display: flex;
+  gap: 14px;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-full {
+  flex: 100%;
+}
+
+.inline-inputs {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+/* ===== Plans Section ===== */
+.plans-column {
+  width: 340px;
+}
+
+.plans-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.plan-card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-3px);
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plan-header h4 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.plan-card ul {
+  padding-left: 20px;
+  margin: 10px 0;
+  color: var(--muted);
+}
+
+.select-btn {
+  display: block;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  background: var(--primary-light);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.addons {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.addon {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.cta-area {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.faq details {
+  background: var(--card);
+  padding: 14px;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+}
+
+.faq summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #f3f4f6;
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .quote-section {
+    flex-direction: column;
+  }
+  .plans-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .row {
+    flex-direction: column;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+/* ===== Total Premium Box ===== */
+.total-box {
+  margin-top: 20px;
+  background: #f0f8ff;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f6fba;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+/* ===== Quick Info Box ===== */
+.quick-info {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  /* Layout fix */
+  width: 100%;         /* take full width of container */
+  max-width: 340px;    /* keep consistent size like plans */
+  margin-left: 0;      /* align left */
+}
+
+.quick-info h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.quick-info ul {
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.5;
+}
